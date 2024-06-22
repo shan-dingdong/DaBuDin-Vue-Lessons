@@ -21,4 +21,25 @@ U | | u     | | | | \ \ / //  |  _|"      /| | | |  \/ _ \/   \|  _ \/ \| |\| |/
 1. 創建 Vue.js 項目：使用 Vue CLI 初始化一個新的 Vue.js 項目。
 2. 編輯組件：修改主要組件，使其在網頁上顯示 "Hello World"。
 3. 運行項目：啟動開發伺服器，並在瀏覽器中查看結果。
-寶逼真棒我愛你
+
+
+:high_brightness:	DaBuDing:寶逼真棒我愛你
+
+## Lesson 2
+**使用 Sourcetree 來管理 Git 內容**
+
+#### 目標
+* 學習 Sourcetree 基本操作（commit、pull、push、merge、checkout...）
+* 將專案連結 Sourcetree，專案有改動時使用 stage :arrow_right: commit
+
+#### 步驟
+> 專案上傳到 GitHub
+1. 創建新 repo，`New repository`
+2. 用 `stage`、`commit` 添加文件到 repo。
+3. Setting :arrow_right: Remote :arrow_right: Add :arrow_right: 在 Remote Name 輸入 origin，在 URL/Path 輸入 GitHub repo 的 URL。
+4. 利用 `stage`、`commit`、`push` 來將專案推送到 GitHub。
+
+> 專案從 GitHub 克隆到本地
+1. 在主頁上找到 `Clone/New`。
+2. 輸入 GitHub 該 repository 的 URL。
+3. 做了更改想要同步到 GitHub 或是要從 GitHub 取得最新更改的話用 `pull`。
