@@ -3,20 +3,30 @@
     <h1>Lesson 2</h1>
     <p>login by Google</p>
   </div>
+  <GoogleLogin :callback="callback">
+    <button v-if="!isLoggedIn" class="glow-on-hover">Login Using Google</button>
+  </GoogleLogin>
+  <button v-if="isLoggedIn" class="glow-on-hover" @click="logout">logout</button>
   <p>
     {{ data }}
   </p>
-  <GoogleLogin :callback="callback">
-    <button class="glow-on-hover">Login Using Google</button>
-  </GoogleLogin>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const data = ref()
+
+const data = ref(null)
+const isLoggedIn = ref(false)
+
 const callback = (response) => {
-  data.value = response
+  data.value = response;
+  isLoggedIn.value = true;
   console.log("Handle the response", response)
+}
+const logout = () => {
+  data.value = null;
+  isLoggedIn.value = false;
+  console.log("User logged out")
 }
 </script>
 
