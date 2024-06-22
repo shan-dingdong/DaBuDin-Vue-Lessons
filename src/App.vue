@@ -1,9 +1,30 @@
+
+
 <template>
   <div id="app">
-    <h1>Lesson 1</h1>
-    <a href="https://ibb.co/cJL9Gtv"><img class="alignleft" src="https://i.ibb.co/cJL9Gtv/2024-06-21-110118.png" alt="2024-06-21-110118"></a>
+    <h1>Lesson 2</h1>
+    <p>login by Google</p>
   </div>
+    <GoogleLogin :callback="callback" prompt/>
+    <!-- <GoogleLogin :callback="callback"/> -->
+    <p>
+      {{ data }}
+    </p>
+
 </template>
+
+<script setup>
+import { ref } from 'vue'
+const data = ref()
+
+const callback = (response) => {
+  // This callback will be triggered when user click on the One Tap prompt
+  // This callback will be also triggered when user click on login button 
+  // and selects or login to his Google account from the popup
+  data.value = response
+  console.log("Handle the response", response)
+}
+</script>
 
 <script>
 export default {
@@ -16,7 +37,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: left;
+  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
   
